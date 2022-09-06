@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANCALA</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>MANCALA</h1>
+        <div class="controls">
+            <button class="instructions">Instructions</button>
+            <button class="new-game">Start New Game</button>
+            
+        </div>
+        
+    </header>
+    
+    <div class="game">
+        <div class="opponent player-1">
+            <div class="player-display">
+                <div class="separator"></div>
+                <div>
+                    <span class="player-name">Dolapo</span>
+                    <span class="your-turn">It's your turn!</span>
+                    <span class="winner-tag"></span>
+                </div>
+                <div class="separator"></div>
+            </div>
+            <div class="taken">
+                <div class="hole-summary"></div>
+            </div>
+
+        </div>
+        <div class="board-wrapper">
+            <div class="board">
+                <div class="side first-side">
+                    <div class="hole-face">
+                        <button class="hole hole-1">
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                        </button>
+                        <div class="hole-summary"></div>
+                    </div>
+                    <div class="hole-face">
+                        <button class="hole hole-2">
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                        </button>
+                        <div class="hole-summary"></div>
+                    </div>
+                    <div class="hole-face">
+                        <button class="hole hole-3">
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                        </button>
+                        <div class="hole-summary"></div>
+                    </div>
+                    <div class="hole-face">
+                        <button class="hole hole-4">
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                        </button>
+                        <div class="hole-summary"></div>
+                    </div>
+                    <div class="hole-face">
+                        <button class="hole hole-5">
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                        </button>
+                        <div class="hole-summary"></div>
+                    </div>
+                    <div class="hole-face">
+                        <button class="hole hole-6">
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                        </button>
+                        <div class="hole-summary"></div>
+                    </div>
+                </div>
+                <div class=" hand picking"></div>
+                <div class="hand taking"></div>
+                <div class="side second-side">
+                    <div class="hole-face">
+                        <button class="hole hole-1">
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                        </button>
+                        <div class="hole-summary"></div>
+                    </div>
+                    <div class="hole-face">
+                        <button class="hole hole-2">
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                        </button>
+                        <div class="hole-summary"></div>
+                    </div>
+                    <div class="hole-face">
+                        <button class="hole hole-3">
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                        </button>
+                        <div class="hole-summary"></div>
+                    </div>
+                    <div class="hole-face">
+                        <button class="hole hole-4">
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                        </button>
+                        <div class="hole-summary"></div>
+                    </div>
+                    <div class="hole-face">
+                        <button class="hole hole-5">
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                        </button>
+                        <div class="hole-summary"></div>
+                    </div>
+                    <div class="hole-face">
+                        <button class="hole hole-6">
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                            <div class="bead"></div>
+                        </button>
+                        <div class="hole-summary"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="opponent player-2">
+            <div class="taken">
+                <div class="hole-summary"></div>
+            </div>
+            <div class="player-display">
+                <div class="separator"></div>
+                <div>
+                    <span class="player-name">Yimika</span>
+                    <span class="your-turn">It's your turn!</span>
+                    <span class="winner-tag"></span>
+                </div>
+                <div class="separator"></div>
+            </div>
+        </div>
+    </div>
+    <footer>Created By Dolapo</footer>
+    
+        <div id="instructions">
+          <div id="close-button">
+            <button>Close X</button>
+          </div>
+          <div>
+            <h2><span>How to Play</span></h2>
+            <p><span>Number of players: </span>2</p>
+            <p>
+              <span>Layout: </span>Rectangular board with 2 rows of 6 holes, with one long hole on each side of the rows called the “mancala”.
+            </p>
+            <p>
+              <span>Initial setup: </span>4 beads are placed in each hole, excluding the mancalas (total of 48 beads). Players have their own rows (player 1 on top, player 2 on bottom), and their own mancala (player 1 on the left, player 2 on the right).
+            </p>
+            <p>
+              <span>Objective: </span>End with the most beads in your posession
+            </p>
+            <p><span>Intstructions: </span></p>
+            <ul>
+              <li>
+                During each player’s turn, they will click on one of their holes to distribute the beads around the board, moving counter-clockwise
+              </li>
+              <li>
+                Marbles will skip over an opponent’s mancala when distributed around the board
+              </li>
+              <li>
+                The game is over when <span>one</span> of the players has no more beads in any of their holes, excluding the mancala
+              </li>
+              <li>
+                The player with the greater number of beads in their posession is the winner. Any holes with beads in them count toward the corresponding player's total at the end of the game.
+              </li>
+            </ul>
+
+</body>
+
+</html>

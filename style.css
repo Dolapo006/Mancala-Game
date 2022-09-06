@@ -1,0 +1,252 @@
+
+
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: blue;
+  --secondary-color: magenta;
+  --background-color: cyan;
+  --darker-text-on-background-color: #000608;
+  --bead-color:purple;
+  --text-color: black;
+  --text-on-primary-color: black;
+}
+
+
+
+body {
+  background: var(--background-color);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  var(--text-color);
+}
+
+header {
+  display: flex;
+  padding: 0 20px;
+  margin: 40px auto 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+
+
+.separator {
+  flex: 1;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 20px;
+  margin: 0 0 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.controls button {
+  font-size: 14px;
+  background: none;
+  color: var(--text-color);
+  border: solid 2px var(--text-color);
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin-right: 5px;
+}
+
+
+
+
+.game {
+  margin: 0 auto 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+}
+
+.side {
+  background: var(--primary-color);
+  height: 120px;
+  border: 7.5px solid var(--secondary-color);
+  border-radius: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 760px) {
+  .side {
+    height: 180px;
+    border-width: 10px;
+  }
+}
+
+.hole-face {
+  position: relative;
+  text-align: center;
+}
+
+.hole,
+.hand,
+.taken {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background: var(--secondary-color);
+  position: relative;
+  border: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+.hole {
+  margin: 0 20px;
+}
+
+@media only screen and (min-width: 760px) {
+  .board {
+    width: 720px;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+
+  .hole,
+  .hand,
+  .taken {
+    width: 90px;
+    height: 90px;
+  }
+
+  .hole {
+    margin: 0 8px;
+  }
+
+  .game {
+    padding: 0 20px;
+  }
+}
+
+.hand {
+  position: absolute;
+  top: 135px;
+  left: 42px;
+  background: none;
+  pointer-events: none;
+  z-index: 2;
+  transform: scale(1.2);
+}
+
+.hand .bead {
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.hole.disabled {
+  cursor: not-allowed;
+}
+
+.hole-summary {
+  top: -27.5px;
+  left: calc(50% - 20px);
+  min-width: 40px;
+  position: absolute;
+  font-weight: bold;
+  padding: 2.5px 5px;
+  color: var(--text-on-primary-color);
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.second-side .hole-summary {
+  top: unset;
+  bottom: -27.5px;
+}
+
+.taken .hole-summary {
+  color: var(--darker-text-on-background-color);
+  top: calc(50% - 13px);
+  left: calc(100% + 5px);
+}
+
+.bead {
+  height: 13px;
+  width: 15px;
+  border-radius: 10px;
+  background: var(--seed-color);
+  border: 1px solid var(--secondary-color);
+  position: absolute;
+  
+  left: calc(22.5px - 7.5px);
+  
+  top: calc(22.5px - 6.5px);
+}
+
+@media only screen and (min-width: 800px) {
+  .bead {
+    top: calc(45px - 7.5px);
+    left: calc(45px - 15px);
+    height: 20px;
+    width: 25px;
+    border-width: 2px;
+  }
+}
+
+.player {
+  margin: 5px 0;
+  text-align: center;
+  font-weight: bold;
+  display: none;
+}
+
+.player .your-turn,
+.player .winner-tag {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 12px;
+  height: 14px;
+  margin: 3.5px 10px;
+  position: absolute;
+  font-weight: 400;
+  display: none;
+}
+
+.player .player-display {
+  height: 25px;
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+}
+
+.player .taken {
+  background: 0;
+  margin: auto;
+}
